@@ -1,0 +1,14 @@
+{
+  "name": "voice-rss",
+  "version": "2.0.0",
+  "description": "An API wrappers for the Voice RSS Text-To-Speech API",
+  "license": "MIT",
+  "repository": "allurewebsolutions/voice-rss",
+  "main": "index.js",
+  "keywords": [
+    "voice rss",
+    "text-to-speech",
+    "api",
+    "allurewebsolutions"
+  ]
+}
