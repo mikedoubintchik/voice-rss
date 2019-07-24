@@ -1,0 +1,8 @@
+node_modules
+dist
+test
+coverage
+samples
+webpack.config.babel.js
+.babelrc
+src/index.js
