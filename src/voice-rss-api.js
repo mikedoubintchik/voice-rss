@@ -59,6 +59,7 @@ class VoiceRSSWebApi {
         return 'key=' + (requestData.key || '') +
             '&src=' + (requestData.src || '') +
             '&hl=' + (requestData.hl || '') +
+            '&v=' + (requestData.v || '') +
             '&r=' + (requestData.r || '') +
             '&c=' + (codec || '') +
             '&f=' + (requestData.f || '') +
@@ -171,6 +172,7 @@ class VoiceRSSWebApi {
             key: this.apiKey,
             src: text,
             hl: this.globalOptions.language ? this.globalOptions.language : (options.hl ? options.hl : 'en-us'),
+            v: this.globalOptions.voice ? this.globalOptions.voice : (options.v ? options.v : undefined),
             r: this.globalOptions.speechRate ? this.globalOptions.speechRate : (options.r ? options.r : 0),
             c: this.globalOptions.audioCodec ? this.globalOptions.audioCodec : (options.c ? options.c : 'mp3'),
             f: this.globalOptions.audioFormat ? this.globalOptions.audioFormat : (options.f ? options.f : '44khz_16bit_stereo'),
@@ -187,6 +189,7 @@ class VoiceRSSWebApi {
     // Getters
     getApiKey = () => this.apiKey;
     getLanguage = () => this.globalOptions.language;
+    getVoice = () => this.globalOptions.voice;
     getSpeechRate = () => this.globalOptions.speechRate;
     getAudioCodec = () => this.globalOptions.audioCodec;
     getAudioFormat = () => this.globalOptions.audioFormat;
@@ -196,6 +199,7 @@ class VoiceRSSWebApi {
     // Setters
     setApiKey = apiKey => this.apiKey = apiKey;
     setLanguage = language => this.globalOptions.language = language;
+    setVoice = voice => this.globalOptions.voice = voice ;
     setSpeechRate = speechRate => this.globalOptions.speechRate = speechRate;
     setAudioCodec = audioCodec => this.globalOptions.audioCodec = audioCodec;
     setAudioFormat = audioFormat => this.globalOptions.audioFormat = audioFormat;
